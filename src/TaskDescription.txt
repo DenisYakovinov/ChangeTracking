@@ -1,0 +1,87 @@
+Tracking changes
+Read 2 file names from the console-file1, file2.
+Files contain strings, file2 is an updated version of file1, and some of the strings match.
+You need to create a combined version of the lines and write them to the lines list.
+The ADDED and REMOVED operations cannot run in a row; they are always separated by the SAME.
+Empty lines are given in the example for clarity.
+There are no empty lines in the original and edited files!
+
+Example 1:
+original          edited           common
+file1:            file2:           result:(lines)
+ 
+line1             line1            SAME line1
+line2                              REMOVED line2
+line3             line3            SAME line3
+line4                              REMOVED line4
+line5             line5            SAME line5
+                  line0            ADDED line0
+line1             line1            SAME line1
+line2                              REMOVED line2
+line3             line3            SAME line3
+                  line4            ADDED line4
+line5             line5            SAME line5
+line0                              REMOVED line0
+
+Example 2:
+original          edited           common
+file1:            file2:           результат:(lines)
+ 
+line1             line1            SAME строка1
+                  line0            ADDED line0
+
+Requirements:
+1. the Solution Class must contain the LineItem class.
+2. the Solution Class must contain enumType.
+3. the Solution Class must contain a public static lines field of the List<LineItem> type, which is immediately initialized.
+4. in the main(String[] args) method, the program must read the file names from the console (use BufferedReader).
+5. In method main(String[] args) BufferedReader to read data from the console should be closed.
+6. The program should read the contents of the first and second of the file (use Finereader).
+7. Streams reading from file (FileReader) must be closed.
+8. the lines List must contain a combined version of lines from files, where one of the ADDED, REMOVED, and SAME operations is specified for each line.
+
+======================================================================================================================================================
+Отследить изменения в файле
+Считать с консоли 2 имени файла - file1, file2.
+Файлы содержат строки, file2 является обновленной версией file1, часть строк совпадают.
+Нужно создать объединенную версию строк, записать их в список lines.
+Операции ADDED и REMOVED не могут идти подряд, они всегда разделены SAME.
+Пустые строки даны в примере для наглядности.
+В оригинальном и редактируемом файлах пустых строк нет!
+
+Пример 1:
+оригинальный    редактированный    общий
+file1:          file2:             результат:(lines)
+ 
+строка1         строка1            SAME строка1
+строка2                            REMOVED строка2
+строка3         строка3            SAME строка3
+строка4                            REMOVED строка4
+строка5         строка5            SAME строка5
+                строка0            ADDED строка0
+строка1         строка1            SAME строка1
+строка2                            REMOVED строка2
+строка3         строка3            SAME строка3
+                строка4            ADDED строка4
+строка5         строка5            SAME строка5
+строка0                            REMOVED строка0
+
+Пример 2:
+оригинальный    редактированный    общий
+file1:          file2:             результат:(lines)
+ 
+строка1         строка1            SAME строка1
+                строка0            ADDED строка0
+
+Пустые строки в примере означают, что этой строки нет в определенном файле.
+
+
+Требования:
+1. Класс Solution должен содержать класс LineItem.
+2. Класс Solution должен содержать enum Type.
+3. Класс Solution должен содержать публичное статическое поле lines типа List<LineItem>, которое сразу проинициализировано.
+4. В методе main(String[] args) программа должна считывать имена файлов с консоли (используй BufferedReader).
+5. В методе main(String[] args) BufferedReader для считывания данных с консоли должен быть закрыт.
+6. Программа должна считывать содержимое первого и второго файла (используй FileReader).
+7. Потоки чтения из файлов (FileReader) должны быть закрыты.
+8. Список lines должен содержать объединенную версию строк из файлов, где для каждой строки указана одна из операций ADDED, REMOVED, SAME.
